@@ -1,0 +1,51 @@
+{
+    "name": "coinrequest/button-wallet-php-api",
+    "description": "PHP API client for BUTTON Wallet",
+    "type": "library",
+    "keywords": [
+        "cryptocurrency",
+        "blockchain",
+        "button wallet"
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "composer/ca-bundle": "^1.1",
+        "php": ">=7.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "vlucas/phpdotenv": "^3.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2",
+        "symfony/var-dumper": "^4.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CoinRequest",
+            "email": "development@coinrequest.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "ButtonWallet\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ButtonWallet\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit tests"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ButtonWallet\\Providers\\ButtonWalletServiceProvider"
+            ]
+        }
+    }
+}
