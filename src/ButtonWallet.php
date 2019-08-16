@@ -18,10 +18,8 @@ class ButtonWallet
 
     public static $TIMEOUT = 10.0;
 
-    private $companyId;
 
-
-    public function __construct($apiKey, $companyId, $testMode = false)
+    public function __construct($apiKey, $testMode = false)
     {
 
         if ($testMode) {
@@ -40,10 +38,6 @@ class ButtonWallet
                 'Authorization' => $apiKey
             ]
         ]);
-
-        $this->companyId = $companyId;
-
-
     }
 
 
@@ -53,7 +47,7 @@ class ButtonWallet
     public function linkEndpoint(): LinkEndpoint
     {
         if ( ! isset($this->linkEndpoint) || is_null($this->linkEndpoint)) {
-            $this->setLinkEndPoint(new LinkEndpoint($this->client, $this->companyId));
+            $this->setLinkEndPoint(new LinkEndpoint($this->client));
         }
 
         return $this->linkEndpoint;

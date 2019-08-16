@@ -22,7 +22,7 @@ instance. And include your API key.
 Something like this
 
 ```
-$buttonWallet = new ButtonWallet('yourpersonalapikey', 'yourcompanyid');
+$buttonWallet = new ButtonWallet('yourpersonalapikey');
 ```
 
 And call the desired endpoint
@@ -39,7 +39,7 @@ Documentation of the endpoints will be later available online. Please check the 
 
 ## Running the tests
 
-First, create a .env file and set your API Key and your Company ID. Please see the .env.example for the template.
+First, create a .env file and set your API Key. Please see the .env.example for the template.
 
 Run the tests in the Tests directory with PHPUnit.
 

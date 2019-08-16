@@ -8,14 +8,10 @@ use GuzzleHttp\Exception\GuzzleException;
 class LinkEndpoint extends BaseEndpoint
 {
 
-    private $companyId;
-
-
-    public function __construct(Client $client, $companyId)
+    public function __construct(Client $client)
     {
         parent::__construct($client);
         $this->endpoint = 'FastLink';
-        $this->companyId = $companyId;
     }
 
 
@@ -46,7 +42,6 @@ class LinkEndpoint extends BaseEndpoint
     {
         $params = [
             'body' => json_encode([
-                'companyId'    => $this->companyId,
                 'currency'     => $currency,
                 'amount'       => $amount,
                 'address'      => $address,
