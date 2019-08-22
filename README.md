@@ -28,14 +28,21 @@ $buttonWallet = new ButtonWallet('yourpersonalapikey');
 And call the desired endpoint
 
 ```
-$buttonWallet->linkEndpoint()->fastLink($params);
+$buttonWallet->linkEndpoint()->createLink($params);
 ```
 
 The current implemented endpoints are: 
 
-* /FastLink
+* /FastLink/
+    * create
+    * readAll
+    * readInfoByUuid
+    * readByUuid
+    * webhook
+    * webhook/set
 
-Documentation of the endpoints will be later available online. Please check the code for any documentation.
+
+Documentation of the endpoints will be later available online. Please check the code for documentation and example requests and responses.
 
 ## Running the tests
 
